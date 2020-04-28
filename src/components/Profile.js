@@ -177,7 +177,7 @@ handleSubmit = (event) => {
 
               <div className="form-group">
                 <label htmlFor="name">You name</label>
-                <input onChange={this.handleChange} className="form-control form-control-lg" type="text" id="profile_name" name="profile_name" value={this.state.profile_name} readOnly={this.state.readonly} />
+                <input onChange={this.handleChange} className="form-control form-control-lg border-0" type="text" id="profile_name" name="profile_name" value={this.state.profile_name} readOnly={this.state.readonly} />
               </div>
               <div>
               <label>Join at:</label>

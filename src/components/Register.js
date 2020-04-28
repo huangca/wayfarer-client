@@ -67,7 +67,12 @@ class Register extends Component {
         })
         this.props.history.push('/')
       })
-      .catch(err => console.log(err))
+      .catch(err => {
+        if(err.message.includes('400')){
+          alert('This username already exists. Please try with new one')
+        }
+        else console(err)
+      })
   }
 
   
@@ -87,13 +92,12 @@ this.props.history.push('/')
 
       <Modal show={this.state.show} onHide={this.handleClose}>
       <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>User Register</Modal.Title>
         </Modal.Header>
 
       <div className="container mt-4">
         <div className="row">
           <div className="col-md-4 offset-md-4">
-            <h4 className="mb-3">Register</h4>
             <form onSubmit={this.handleSubmit}>
               <div className="form-group">
                 <label htmlFor="username">UserName</label>

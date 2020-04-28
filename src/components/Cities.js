@@ -304,12 +304,14 @@ handleDelete=(post)=>{
 
 
 		return (
+			<div>
+			<div class="container">
 			<div className="row no-gutters">
-			<div className="col">
+			<div className="col-">
 			{this.state.cities.map((city)=>(
 				
 					<div className="container">
-					  <div className="row gamerow" id="#">
+					  <div className="row " id="#">
 
 					    <div className="col-sm">
 					{/*   <h2> <a className="nav-link" id={city._id} href="#" onClick={()=>{ this.handleClick(city)}}>{city.name}</a></h2> */}
@@ -326,16 +328,19 @@ handleDelete=(post)=>{
 
 			
 			
-				<div className="col-6">
+				<div className="col-lg">
 			 {this.state.selectCity?<CityDetail />:null} 
 			   {/*<CityRoutes currentUser={this.state.currentUser} 
             setCurrentUser={this.setCurrentUser} />*/}
 			    </div>
+			</div>
+
 			   <AddPost showNew={this.state.showNew} handleAddClose={this.handleAddClose} handleAddPostSubmit={this.handleAddPostSubmit} handleChange={this.handleChange} post_title={this.state.post_title} post_content={this.state.post_content} />
 			   <br></br>
 			   <br></br>
 				<EditPost showEdit={this.state.showEdit} handleEditClose={this.handleEditClose} handleEditSubmit={this.handleEditSubmit} handleChange={this.handleChange} post_title={this.state.post_title} post_content={this.state.post_content}/>
 			</div>
+</div>
 		);
 	}
 }
